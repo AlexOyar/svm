@@ -4,7 +4,7 @@ import numpy as np
 from sklearn import preprocessing, model_selection, neighbors, svm
 import pandas as pd 
 
-
+#remove non-data values
 df = pd.read_csv('breast-cancer-wisconsin.data.txt')
 df.replace('?', -99999, inplace=True)
 df.drop(['id'],1,inplace=True)
